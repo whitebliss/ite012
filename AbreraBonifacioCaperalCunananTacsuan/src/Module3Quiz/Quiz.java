@@ -3,6 +3,7 @@ package Module3Quiz;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 
 public class Quiz {
 
@@ -19,9 +20,16 @@ public class Quiz {
 		Quiz.score = score;
 	}
 	
-	public void initQuiz() {
-		InitItem1 q1 = new InitItem1();
+	public static void main(String[] args) {
+
+		//message before the quiz starts
+		JOptionPane.showMessageDialog(null, "Click on the button to start the quiz.",
+				"Module 3 Quiz", JOptionPane.PLAIN_MESSAGE);
+		
+		//start quiz
+		Item1 q1 = new Item1();
 		q1.main(null);
+		
 	}
 	
 }
