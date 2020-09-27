@@ -1,15 +1,14 @@
 package Module3Quiz;
 
-
 import javax.swing.*;
 import javax.swing.GroupLayout.*;
 import javax.swing.LayoutStyle.*;
 import java.awt.*;
 import java.awt.event.*;
 
-public class Item1 extends Quiz {
-	
-	private JFrame frmModuleQuiz;
+public class Item2 extends Quiz {
+
+	private JFrame frame;
 
 	/**
 	 * Launch the application.
@@ -18,8 +17,8 @@ public class Item1 extends Quiz {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					Item1 window = new Item1();
-					window.frmModuleQuiz.setVisible(true);
+					Item2 window = new Item2();
+					window.frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -30,7 +29,7 @@ public class Item1 extends Quiz {
 	/**
 	 * Create the application.
 	 */
-	public Item1() {
+	public Item2() {
 		initialize();
 	}
 
@@ -38,22 +37,21 @@ public class Item1 extends Quiz {
 	 * Initialize the contents of the frame.
 	 */
 	private void initialize() {
-		frmModuleQuiz = new JFrame();
-		frmModuleQuiz.getContentPane().setBackground(new Color(245, 245, 245));
-		frmModuleQuiz.setTitle("Module 3 Quiz");
-		frmModuleQuiz.setBackground(Color.LIGHT_GRAY);
-		frmModuleQuiz.setBounds(100, 100, 422, 167);
-		frmModuleQuiz.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame = new JFrame();
+		frame.getContentPane().setBackground(new Color(245, 245, 245));
+		frame.setTitle("Module 3 Quiz");
+		frame.setBackground(Color.LIGHT_GRAY);
+		frame.setBounds(100, 100, 422, 187);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
-		JLabel lblNewLabel = new JLabel("<html><body><p style='width: 300px;'>Strictly speaking, no work of art is realistic. Since no work of art is an accurate copy of what exists in the natural world.</p></body></html>");
+		JLabel lblNewLabel = new JLabel("<html><body><p style='width: 300px;'>The artist selects and renders the objects with their shapes, colors and positions altered. In some abstract works, enough of a likeness has been retained to represent real things.</p></body></html>");
 		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 13));
 		
 		JButton btnNewButton = new JButton("Distortion");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				createNewFile();
-				frmModuleQuiz.dispose();
-				Item2.main(null);
+				frame.dispose();
+				Item3.main(null);
 			}
 		});
 		btnNewButton.setFont(new Font("Tahoma", Font.PLAIN, 13));
@@ -61,10 +59,8 @@ public class Item1 extends Quiz {
 		JButton btnNewButton_1 = new JButton("Realism");
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				createNewFile();
-				addScore();
-				frmModuleQuiz.dispose();
-				Item2.main(null);
+				frame.dispose();
+				Item3.main(null);
 			}
 		});
 		btnNewButton_1.setFont(new Font("Tahoma", Font.PLAIN, 13));
@@ -72,9 +68,9 @@ public class Item1 extends Quiz {
 		JButton btnNewButton_2 = new JButton("Abstraction");
 		btnNewButton_2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				createNewFile();
-				frmModuleQuiz.dispose();
-				Item2.main(null);
+				addScore();
+				frame.dispose();
+				Item3.main(null);
 			}
 		});
 		btnNewButton_2.setFont(new Font("Tahoma", Font.PLAIN, 13));
@@ -82,16 +78,15 @@ public class Item1 extends Quiz {
 		JButton btnNewButton_3 = new JButton("Surrealism");
 		btnNewButton_3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				createNewFile();
-				frmModuleQuiz.dispose();
-				Item2.main(null);
+				frame.dispose();
+				Item3.main(null);
 			}
 		});
 		btnNewButton_3.setFont(new Font("Tahoma", Font.PLAIN, 13));
 		
-		JLabel lblNewLabel_1 = new JLabel("QUESTION #1");
+		JLabel lblNewLabel_1 = new JLabel("QUESTION #2");
 		lblNewLabel_1.setFont(new Font("Tahoma", Font.BOLD, 14));
-		GroupLayout groupLayout = new GroupLayout(frmModuleQuiz.getContentPane());
+		GroupLayout groupLayout = new GroupLayout(frame.getContentPane());
 		groupLayout.setHorizontalGroup(
 			groupLayout.createParallelGroup(Alignment.LEADING)
 				.addGroup(groupLayout.createSequentialGroup()
@@ -124,6 +119,6 @@ public class Item1 extends Quiz {
 						.addComponent(btnNewButton_3))
 					.addContainerGap(12, Short.MAX_VALUE))
 		);
-		frmModuleQuiz.getContentPane().setLayout(groupLayout);
+		frame.getContentPane().setLayout(groupLayout);
 	}
 }
