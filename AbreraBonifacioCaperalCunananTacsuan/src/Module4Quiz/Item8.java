@@ -6,15 +6,15 @@ import javax.swing.LayoutStyle.*;
 import java.awt.*;
 import java.awt.event.*;
 
-public class Item1 extends Quiz {
-	
+public class Item8 extends Quiz {
+
 	private JFrame frame;
 
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					Item1 window = new Item1();
+					Item8 window = new Item8();
 					window.frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -23,7 +23,7 @@ public class Item1 extends Quiz {
 		});
 	}
 
-	public Item1() {
+	public Item8() {
 		initialize();
 	}
 
@@ -32,54 +32,50 @@ public class Item1 extends Quiz {
 		frame.getContentPane().setBackground(new Color(245, 245, 245));
 		frame.setTitle("Module 4 Quiz");
 		frame.setBackground(Color.LIGHT_GRAY);
-		frame.setBounds(100, 100, 477, 170);
+		frame.setBounds(100, 100, 403, 166);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
-		JLabel lblNewLabel = new JLabel("<html><body><p style='width: 300px;'>In what century the Rococo style became prevalent in interior design, painting, etc.?</p></body></html>");
+		JLabel lblNewLabel = new JLabel("<html><body><p style='width: 300px;'>The innovative international style that became fashionable from 1890 to the First World War.</p></body></html>");
 		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 13));
 		
-		JButton btnNewButton = new JButton("18th century");
+		JButton btnNewButton = new JButton("Art Nouveau");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				createNewFile();
 				addScore();
 				frame.dispose();
-				Item2.main(null);
+				Item9.main(null);
 			}
 		});
 		btnNewButton.setFont(new Font("Tahoma", Font.PLAIN, 13));
 		
-		JButton btnNewButton_1 = new JButton("19th century");
+		JButton btnNewButton_1 = new JButton("Cubism");
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				createNewFile();
 				frame.dispose();
-				Item2.main(null);
+				Item9.main(null);
 			}
 		});
 		btnNewButton_1.setFont(new Font("Tahoma", Font.PLAIN, 13));
 		
-		JButton btnNewButton_2 = new JButton("20th century");
+		JButton btnNewButton_2 = new JButton("Futurism");
 		btnNewButton_2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				createNewFile();
 				frame.dispose();
-				Item2.main(null);
+				Item9.main(null);
 			}
 		});
 		btnNewButton_2.setFont(new Font("Tahoma", Font.PLAIN, 13));
 		
-		JButton btnNewButton_3 = new JButton("21th century");
+		JButton btnNewButton_3 = new JButton("Fauvism");
 		btnNewButton_3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				createNewFile();
 				frame.dispose();
-				Item2.main(null);
+				Item9.main(null);
 			}
 		});
 		btnNewButton_3.setFont(new Font("Tahoma", Font.PLAIN, 13));
 		
-		JLabel lblNewLabel_1 = new JLabel("QUESTION #1");
+		JLabel lblNewLabel_1 = new JLabel("QUESTION #8");
 		lblNewLabel_1.setFont(new Font("Tahoma", Font.BOLD, 14));
 		GroupLayout groupLayout = new GroupLayout(frame.getContentPane());
 		groupLayout.setHorizontalGroup(
@@ -88,6 +84,7 @@ public class Item1 extends Quiz {
 					.addContainerGap()
 					.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
 						.addComponent(lblNewLabel)
+						.addComponent(lblNewLabel_1)
 						.addGroup(groupLayout.createSequentialGroup()
 							.addComponent(btnNewButton)
 							.addPreferredGap(ComponentPlacement.RELATED)
@@ -95,8 +92,7 @@ public class Item1 extends Quiz {
 							.addPreferredGap(ComponentPlacement.RELATED)
 							.addComponent(btnNewButton_2)
 							.addPreferredGap(ComponentPlacement.RELATED)
-							.addComponent(btnNewButton_3))
-						.addComponent(lblNewLabel_1))
+							.addComponent(btnNewButton_3)))
 					.addContainerGap(6, Short.MAX_VALUE))
 		);
 		groupLayout.setVerticalGroup(
@@ -106,13 +102,13 @@ public class Item1 extends Quiz {
 					.addComponent(lblNewLabel_1)
 					.addPreferredGap(ComponentPlacement.UNRELATED)
 					.addComponent(lblNewLabel)
-					.addGap(18)
+					.addGap(13)
 					.addGroup(groupLayout.createParallelGroup(Alignment.BASELINE)
 						.addComponent(btnNewButton)
 						.addComponent(btnNewButton_1)
 						.addComponent(btnNewButton_2)
 						.addComponent(btnNewButton_3))
-					.addContainerGap(12, Short.MAX_VALUE))
+					.addContainerGap(16, Short.MAX_VALUE))
 		);
 		frame.getContentPane().setLayout(groupLayout);
 	}

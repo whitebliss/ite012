@@ -6,15 +6,15 @@ import javax.swing.LayoutStyle.*;
 import java.awt.*;
 import java.awt.event.*;
 
-public class Item1 extends Quiz {
-	
+public class Item2 extends Quiz {
+
 	private JFrame frame;
 
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					Item1 window = new Item1();
+					Item2 window = new Item2();
 					window.frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -23,7 +23,7 @@ public class Item1 extends Quiz {
 		});
 	}
 
-	public Item1() {
+	public Item2() {
 		initialize();
 	}
 
@@ -32,54 +32,50 @@ public class Item1 extends Quiz {
 		frame.getContentPane().setBackground(new Color(245, 245, 245));
 		frame.setTitle("Module 4 Quiz");
 		frame.setBackground(Color.LIGHT_GRAY);
-		frame.setBounds(100, 100, 477, 170);
+		frame.setBounds(100, 100, 474, 155);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
-		JLabel lblNewLabel = new JLabel("<html><body><p style='width: 300px;'>In what century the Rococo style became prevalent in interior design, painting, etc.?</p></body></html>");
+		JLabel lblNewLabel = new JLabel("<html><body><p style='width: 300px;'>Aimed to depict the transience of light.</p></body></html>");
 		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 13));
 		
-		JButton btnNewButton = new JButton("18th century");
+		JButton btnNewButton = new JButton("Realism");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				createNewFile();
-				addScore();
 				frame.dispose();
-				Item2.main(null);
+				Item3.main(null);
 			}
 		});
 		btnNewButton.setFont(new Font("Tahoma", Font.PLAIN, 13));
 		
-		JButton btnNewButton_1 = new JButton("19th century");
+		JButton btnNewButton_1 = new JButton("Impressionism");
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				createNewFile();
+				addScore();
 				frame.dispose();
-				Item2.main(null);
+				Item3.main(null);
 			}
 		});
 		btnNewButton_1.setFont(new Font("Tahoma", Font.PLAIN, 13));
 		
-		JButton btnNewButton_2 = new JButton("20th century");
+		JButton btnNewButton_2 = new JButton("Romanticism");
 		btnNewButton_2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				createNewFile();
 				frame.dispose();
-				Item2.main(null);
+				Item3.main(null);
 			}
 		});
 		btnNewButton_2.setFont(new Font("Tahoma", Font.PLAIN, 13));
 		
-		JButton btnNewButton_3 = new JButton("21th century");
+		JButton btnNewButton_3 = new JButton("Neoclassicism");
 		btnNewButton_3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				createNewFile();
 				frame.dispose();
-				Item2.main(null);
+				Item3.main(null);
 			}
 		});
 		btnNewButton_3.setFont(new Font("Tahoma", Font.PLAIN, 13));
 		
-		JLabel lblNewLabel_1 = new JLabel("QUESTION #1");
+		JLabel lblNewLabel_1 = new JLabel("QUESTION #2");
 		lblNewLabel_1.setFont(new Font("Tahoma", Font.BOLD, 14));
 		GroupLayout groupLayout = new GroupLayout(frame.getContentPane());
 		groupLayout.setHorizontalGroup(
