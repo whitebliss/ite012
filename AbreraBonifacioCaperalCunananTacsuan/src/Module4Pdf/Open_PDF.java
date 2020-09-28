@@ -99,6 +99,7 @@ public class Open_PDF {
 		btnNewButton_2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				Quiz qu = new Quiz();
+				frame.dispose();
 				qu.main(null);
 			}
 		});
