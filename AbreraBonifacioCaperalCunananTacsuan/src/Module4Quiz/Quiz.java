@@ -67,7 +67,7 @@ public class Quiz {
 	public static void main(String[] args) {
 
 		JOptionPane.showMessageDialog(null, "Click on the button to start the quiz.",
-				"Module 3 Quiz", JOptionPane.PLAIN_MESSAGE);
+				"Module 4 Quiz", JOptionPane.PLAIN_MESSAGE);
 		
 		if (getAttempts() != 0) {
 			Item1.main(null);
