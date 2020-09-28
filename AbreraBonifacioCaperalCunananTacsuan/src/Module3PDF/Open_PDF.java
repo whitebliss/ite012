@@ -55,7 +55,7 @@ public class Open_PDF {
 			public void actionPerformed(ActionEvent e) {
 				
 				try {
-					Runtime.getRuntime().exec("rundll32 url.dll, FileProtocolHandler " + "C:\\Users\\Austin\\Desktop\\ArtSubject.pdf");
+					Runtime.getRuntime().exec("rundll32 url.dll, FileProtocolHandler " + "ArtSubject.pdf");
 				}
 				catch (Exception e1) {
 					JoptionPane.showMessageDialog(null, "Check your file details");
