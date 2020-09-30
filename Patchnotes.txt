@@ -1,0 +1,5 @@
+Alpha Version 0.01 (57b1056) Oct/1/2020 3:09
+
+	+ Registration has been added.
+	+ Login has been added.
+	+ Database "anna" has been created.
