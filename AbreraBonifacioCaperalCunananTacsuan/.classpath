@@ -6,7 +6,7 @@
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="B:/JAVA/mysql-connector-java-5.1.49/mysql-connector-java-5.1.49-bin.jar"/>
-	<classpathentry kind="lib" path="C:/Program Files/Java/jre1.8.0_261/lib/ext/jfxrt.jar"/>
+	<classpathentry kind="lib" path="B:/JAVA/Annaliza/ite012/Jar/jfxrt.jar"/>
+	<classpathentry kind="lib" path="B:/JAVA/Annaliza/ite012/Jar/mysql-connector-java-5.1.49-bin.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
