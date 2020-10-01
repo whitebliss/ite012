@@ -1,14 +1,17 @@
 package Index;
 
+import Model.*;
+import java.sql.ResultSet;
 import javax.swing.*;
 import javax.swing.GroupLayout.*;
 import javax.swing.LayoutStyle.*;
 import java.awt.*;
 import java.awt.event.*;
 
-public class TeacherIndexPage {
+public class TeacherIndexPage extends JFrame{
 
 	private JFrame frame;
+	private Teacher session;
 
 	/**
 	 * Launch the application.
@@ -32,29 +35,34 @@ public class TeacherIndexPage {
 	public TeacherIndexPage() {
 		initialize();
 	}
+	
+
+	public TeacherIndexPage(ResultSet rs) throws Exception {
+		this.session = new Teacher(rs.getInt("user_id"), rs.getString("email"), rs.getString("password"), rs.getString("firstname"), rs.getString("lastname"), rs.getLong("c_num"), rs.getString("subject"), rs.getString("specialization"));
+		initialize();
+	}
 
 	/**
 	 * Initialize the contents of the frame.
 	 */
 	private void initialize() {
-		frame = new JFrame();
-		frame.setTitle("Art Appreciation");
-		frame.setBackground(Color.LIGHT_GRAY);
-		frame.setBounds(100, 100, 450, 210);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setTitle("Art Appreciation");
+		setBackground(Color.LIGHT_GRAY);
+		setBounds(100, 100, 450, 210);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);		
 		
 		JLabel lblNewLabel = new JLabel("Art Appreciation");
 		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 14));
 		
 		/**** --- FIRSTNAME LASTNAME FROM DATABASE --- ****/
-		JLabel lblNewLabel_1 = new JLabel("<html><body><p style='width: 300px;'>Hello FIRSTNAME LASTNAME! Your students are tasked to take two quizzes today. Check their grades by clicking the button below.</p></body></html>");
+		JLabel lblNewLabel_1 = new JLabel("<html><body><p style='width: 300px;'>Hello " + session.getFirstName() + " " + session.getLastName() + "! Your students are tasked to take two quizzes today. Check their grades by clicking the button below.</p></body></html>");
 		lblNewLabel_1.setFont(new Font("Tahoma", Font.PLAIN, 12));
 		
 		JButton btnNewButton = new JButton("View Grades\r\n");
 		btnNewButton.setFont(new Font("Tahoma", Font.PLAIN, 12));
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				frame.dispose();
+				dispose();
 				ViewGrades.main(null);
 			}
 		});
@@ -63,11 +71,11 @@ public class TeacherIndexPage {
 		btnNewButton_2.setFont(new Font("Tahoma", Font.PLAIN, 11));
 		btnNewButton_2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				frame.dispose();
+				dispose();
 				TeacherProfile.main(null);
 			}
 		});
-		GroupLayout groupLayout = new GroupLayout(frame.getContentPane());
+		GroupLayout groupLayout = new GroupLayout(getContentPane());
 		groupLayout.setHorizontalGroup(
 			groupLayout.createParallelGroup(Alignment.TRAILING)
 				.addGroup(groupLayout.createSequentialGroup()
@@ -102,6 +110,6 @@ public class TeacherIndexPage {
 					.addComponent(btnNewButton)
 					.addContainerGap(38, Short.MAX_VALUE))
 		);
-		frame.getContentPane().setLayout(groupLayout);
+		getContentPane().setLayout(groupLayout);
 	}
 }

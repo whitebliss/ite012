@@ -1,5 +1,7 @@
 package Index;
 
+import java.sql.ResultSet;
+import Model.*;
 import javax.swing.*;
 import javax.swing.GroupLayout.*;
 import java.awt.*;
@@ -7,9 +9,10 @@ import java.awt.event.*;
 import Module3PDF.OpenModule3Pdf;
 import Module4Pdf.OpenModule4Pdf;
 
-public class StudentIndexPage {
+public class StudentIndexPage extends JFrame{
 
 	private JFrame frmArtAppreciation;
+	private Student session;
 
 	/**
 	 * Launch the application.
@@ -33,28 +36,31 @@ public class StudentIndexPage {
 	public StudentIndexPage() {
 		initialize();
 	}
+	public StudentIndexPage(ResultSet rs) throws Exception {
+		this.session = new Student(rs.getInt("user_id"), rs.getString("email"), rs.getString("password"), rs.getString("firstname"), rs.getString("lastname"), rs.getLong("c_num"), rs.getLong("s_num"), rs.getString("program"));
+		initialize();
+	}
 
 	/**
 	 * Initialize the contents of the frame.
 	 */
 	private void initialize() {
-		frmArtAppreciation = new JFrame();
-		frmArtAppreciation.setTitle("Art Appreciation");
-		frmArtAppreciation.setBackground(Color.LIGHT_GRAY);
-		frmArtAppreciation.setBounds(100, 100, 450, 218);
-		frmArtAppreciation.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setTitle("Art Appreciation");
+		setBackground(Color.LIGHT_GRAY);
+		setBounds(100, 100, 450, 218);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		JLabel lblNewLabel = new JLabel("Art Appreciation");
 		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 14));
 		
 		/**** --- FIRSTNAME LASTNAME FROM DATABASE --- ****/
-		JLabel lblNewLabel_1 = new JLabel("<html><body><p style='width: 300px;'>Hello FIRSTNAME LASTNAME! You have two quizzes to take today about Module 3 and Module 4. Click on the button to review your lessons.</p></body></html>");
+		JLabel lblNewLabel_1 = new JLabel("<html><body><p style='width: 300px;'>Hello " + session.getFirstName() + " " + session.getLastName() + "! You have two quizzes to take today about Module 3 and Module 4. Click on the button to review your lessons.</p></body></html>");
 		lblNewLabel_1.setFont(new Font("Tahoma", Font.PLAIN, 12));
 		
 		JButton btnNewButton = new JButton("Module 3");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				frmArtAppreciation.dispose();
+				dispose();
 				OpenModule3Pdf.main(null);
 			}
 		});
@@ -63,7 +69,7 @@ public class StudentIndexPage {
 		JButton btnNewButton_1 = new JButton("Module 4");
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				frmArtAppreciation.dispose();
+				dispose();
 				OpenModule4Pdf.main(null);
 			}
 		});
@@ -73,11 +79,11 @@ public class StudentIndexPage {
 		btnNewButton_2.setFont(new Font("Tahoma", Font.PLAIN, 11));
 		btnNewButton_2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				frmArtAppreciation.dispose();
+				dispose();
 				StudentProfile.main(null);
 			}
 		});
-		GroupLayout groupLayout = new GroupLayout(frmArtAppreciation.getContentPane());
+		GroupLayout groupLayout = new GroupLayout(getContentPane());
 		groupLayout.setHorizontalGroup(
 			groupLayout.createParallelGroup(Alignment.TRAILING)
 				.addGroup(groupLayout.createSequentialGroup()
@@ -116,6 +122,6 @@ public class StudentIndexPage {
 						.addComponent(btnNewButton_1))
 					.addContainerGap(105, Short.MAX_VALUE))
 		);
-		frmArtAppreciation.getContentPane().setLayout(groupLayout);
+		getContentPane().setLayout(groupLayout);
 	}
 }

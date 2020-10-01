@@ -1,4 +1,5 @@
 package View;
+import Index.*;
 import java.sql.*;
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
@@ -109,10 +110,16 @@ public class Main extends JFrame {
 						 * To get a value as string use (session.getString("column_name"))
 						 * 
 						 */
-						JOptionPane.showMessageDialog(null, "Welcome " + session.getString("firstname") + "!");
-						JOptionPane.showMessageDialog(null, "The index is not yet available.");
-						JOptionPane.showMessageDialog(null, "Program will be terminated");
-						System.exit(0);
+						if(session.getInt("type_id") == 1)
+						{
+							TeacherIndexPage tip_form = new TeacherIndexPage(session);
+							tip_form.setVisible(true);
+						}
+						else if(session.getInt("type_id") == 2)
+						{
+							StudentIndexPage sip_form = new StudentIndexPage(session);
+							sip_form.setVisible(true);
+						}
 					}
 					else
 					{
