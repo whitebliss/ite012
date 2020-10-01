@@ -18,7 +18,8 @@ import javax.swing.LayoutStyle.ComponentPlacement;
 import Module4Quiz.Quiz;
 import Index.StudentIndexPage;
 
-public class OpenModule4Pdf {
+@SuppressWarnings("serial")
+public class OpenModule4Pdf extends JFrame {
 
 	protected static final String JOptionand = null;
 	protected static final OpenModule4Pdf JoptionPane = null;

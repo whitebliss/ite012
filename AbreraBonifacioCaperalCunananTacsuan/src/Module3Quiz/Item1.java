@@ -10,6 +10,7 @@ import java.awt.event.*;
 /*------ new > other > windowbuilder > swing application
  * 		 copy private void initialize() to the new class ------*/
 
+@SuppressWarnings("serial")
 public class Item1 extends Quiz {
 	
 	private JFrame frame;

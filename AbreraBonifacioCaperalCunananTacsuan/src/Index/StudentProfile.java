@@ -13,7 +13,8 @@ import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
-public class StudentProfile {
+@SuppressWarnings("serial")
+public class StudentProfile extends JFrame {
 
 	private JFrame frmArtAppreciation;
 

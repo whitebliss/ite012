@@ -3,7 +3,8 @@ package Module3Quiz;
 import java.io.*;
 import javax.swing.*;
 
-public class Quiz {
+@SuppressWarnings("serial")
+public class Quiz extends JFrame {
 
 	static int score = 0, attempts = 3;
 

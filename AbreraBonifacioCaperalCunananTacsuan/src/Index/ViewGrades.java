@@ -4,7 +4,8 @@ import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 
-public class ViewGrades {
+@SuppressWarnings("serial")
+public class ViewGrades extends JFrame {
 
 	private JFrame frame;
 

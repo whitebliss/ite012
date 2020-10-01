@@ -6,6 +6,7 @@ import javax.swing.LayoutStyle.*;
 import java.awt.*;
 import java.awt.event.*;
 
+@SuppressWarnings("serial")
 public class Item3 extends Quiz {
 
 	private JFrame frame;

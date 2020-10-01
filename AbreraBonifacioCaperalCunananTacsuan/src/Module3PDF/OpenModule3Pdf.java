@@ -15,7 +15,8 @@ import javax.swing.LayoutStyle.ComponentPlacement;
 import Module3Quiz.Quiz;
 import Index.StudentIndexPage;
 
-public class OpenModule3Pdf {
+@SuppressWarnings("serial")
+public class OpenModule3Pdf extends JFrame {
 
 	protected static final String JOptionand = null;
 	protected static final OpenModule3Pdf JoptionPane = null;

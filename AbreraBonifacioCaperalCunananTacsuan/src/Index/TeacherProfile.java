@@ -13,7 +13,8 @@ import javax.swing.LayoutStyle.ComponentPlacement;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
-public class TeacherProfile {
+@SuppressWarnings("serial")
+public class TeacherProfile extends JFrame {
 
 	private JFrame frame;
 
