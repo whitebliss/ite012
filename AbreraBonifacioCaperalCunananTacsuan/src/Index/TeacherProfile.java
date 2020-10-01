@@ -10,6 +10,8 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.GroupLayout.Alignment;
 import javax.swing.LayoutStyle.ComponentPlacement;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class TeacherProfile {
 
@@ -82,6 +84,12 @@ public class TeacherProfile {
 		lblNewLabel_5_1.setFont(new Font("Tahoma", Font.PLAIN, 12));
 		
 		JButton btnNewButton = new JButton("Return");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				frame.dispose();
+				TeacherIndexPage.main(null);
+			}
+		});
 		btnNewButton.setFont(new Font("Tahoma", Font.PLAIN, 12));
 		
 		JLabel lblNewLabel_6 = new JLabel("Specialization");
