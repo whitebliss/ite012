@@ -1,5 +1,6 @@
 package Index;
 
+import java.awt.Color;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
@@ -45,6 +46,7 @@ public class StudentProfile {
 	private void initialize() {
 		frmArtAppreciation = new JFrame();
 		frmArtAppreciation.setTitle("Profile");
+		frmArtAppreciation.setBackground(Color.LIGHT_GRAY);
 		frmArtAppreciation.setBounds(100, 100, 450, 300);
 		frmArtAppreciation.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		

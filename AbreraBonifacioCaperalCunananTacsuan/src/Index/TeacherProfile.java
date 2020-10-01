@@ -1,5 +1,6 @@
 package Index;
 
+import java.awt.Color;
 import java.awt.EventQueue;
 import java.awt.Font;
 
@@ -43,6 +44,7 @@ public class TeacherProfile {
 	private void initialize() {
 		frame = new JFrame();
 		frame.setTitle("Profile");
+		frame.setBackground(Color.LIGHT_GRAY);
 		frame.setBounds(100, 100, 450, 238);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		

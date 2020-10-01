@@ -4,8 +4,8 @@ import javax.swing.*;
 import javax.swing.GroupLayout.*;
 import java.awt.*;
 import java.awt.event.*;
-import Module3PDF.Open_PDF;
-import Module4Pdf.Open_PDF;
+import Module3PDF.OpenModule3Pdf;
+import Module4Pdf.OpenModule4Pdf;
 
 public class StudentIndexPage {
 
@@ -40,6 +40,7 @@ public class StudentIndexPage {
 	private void initialize() {
 		frmArtAppreciation = new JFrame();
 		frmArtAppreciation.setTitle("Art Appreciation");
+		frmArtAppreciation.setBackground(Color.LIGHT_GRAY);
 		frmArtAppreciation.setBounds(100, 100, 450, 218);
 		frmArtAppreciation.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
@@ -54,7 +55,7 @@ public class StudentIndexPage {
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				frmArtAppreciation.dispose();
-				Module3PDF.Open_PDF.main(null);
+				OpenModule3Pdf.main(null);
 			}
 		});
 		btnNewButton.setFont(new Font("Tahoma", Font.PLAIN, 12));
@@ -63,7 +64,7 @@ public class StudentIndexPage {
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				frmArtAppreciation.dispose();
-				Module4Pdf.Open_PDF.main(null);
+				OpenModule4Pdf.main(null);
 			}
 		});
 		btnNewButton_1.setFont(new Font("Tahoma", Font.PLAIN, 12));

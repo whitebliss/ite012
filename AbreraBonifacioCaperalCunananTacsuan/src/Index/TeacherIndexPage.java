@@ -39,6 +39,7 @@ public class TeacherIndexPage {
 	private void initialize() {
 		frame = new JFrame();
 		frame.setTitle("Art Appreciation");
+		frame.setBackground(Color.LIGHT_GRAY);
 		frame.setBounds(100, 100, 450, 210);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
