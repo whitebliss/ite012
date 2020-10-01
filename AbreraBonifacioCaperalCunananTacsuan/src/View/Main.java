@@ -114,11 +114,13 @@ public class Main extends JFrame {
 						{
 							TeacherIndexPage tip_form = new TeacherIndexPage(session);
 							tip_form.setVisible(true);
+							dispose();
 						}
 						else if(session.getInt("type_id") == 2)
 						{
 							StudentIndexPage sip_form = new StudentIndexPage(session);
 							sip_form.setVisible(true);
+							dispose();
 						}
 					}
 					else
