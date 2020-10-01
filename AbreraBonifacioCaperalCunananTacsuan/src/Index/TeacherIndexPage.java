@@ -52,6 +52,12 @@ public class TeacherIndexPage {
 		
 		JButton btnNewButton = new JButton("View Grades\r\n");
 		btnNewButton.setFont(new Font("Tahoma", Font.PLAIN, 12));
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				frame.dispose();
+				ViewGrades.main(null);
+			}
+		});
 		
 		JButton btnNewButton_2 = new JButton("View Profile");
 		btnNewButton_2.setFont(new Font("Tahoma", Font.PLAIN, 11));
